@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 320px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        button {
+            background: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="myForm" action="submit.php" method="POST" onsubmit="return validateForm()">
+        <h2>Submit Data</h2>
+        <input type="text" name="name" id="name" placeholder="Enter Name" required>
+        <input type="email" name="email" id="email" placeholder="Enter Email" required>
+        <input type="text" name="phone" id="phone" placeholder="Enter Phone" required>
+        <input type="text" name="subject" id="subject" placeholder="Enter Subject" required>
+        <textarea name="message" id="message" placeholder="Enter Message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let subject = document.getElementById("subject").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+        }
+    </script>
+
+</body>
+
+</html>
